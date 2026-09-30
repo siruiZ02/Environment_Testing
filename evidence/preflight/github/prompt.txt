@@ -1,0 +1,38 @@
+Implement a minimal local synthetic github environment, adapting VeriEnv's
+website + backend + SDK + reset pattern. Work only inside this directory.
+This fixed functional specification replaces absent screenshots; do not claim visual fidelity.
+Do not contact GitHub, Amazon, Linear, or any external data API. Use only seeded data.
+Use Python standard library HTTP server + SQLite + HTML/JS, no package installation needed.
+Bind only 127.0.0.1:13000. Start using python3 app.py and initialize persistent SQLite state.
+Provide GET /health returning {"ok":true}; POST /reset restores exactly the seed;
+GET /state returns current persisted state as JSON, with no writes or caching.
+Provide sdk.py exposing Client(base_url).state() and .reset() using urllib.
+UI at / must contain a search input data-testid="search", button "search-submit",
+matching result link/button "result", and details container "details" containing
+repo name for GitHub or product name for Amazon. Search must filter actual seeded data.
+GitHub: details includes inputs "issue-title", "issue-body" and button "create-issue";
+click inserts one issue with exactly title/body keys into persistent issues list.
+Amazon: details includes button "add-cart"; click adds one product with product_id/quantity
+keys to persistent cart list. No checkout or payment flows.
+Provide these exact test IDs with unique elements, actual browser handlers, no placeholders.
+Preserve seed data, implement repeatable reset, and write website_description.md,
+start_servers.sh, reset_servers.sh and task_instructions.json documenting the one fixed task.
+The server must stay in foreground. Do not start servers or leave background processes.
+Do not change input files. Fixed specification follows:
+{
+  "site": "github",
+  "port": 13000,
+  "seed": {
+    "repo": "demo/agent-lab",
+    "issues": []
+  },
+  "task": "Search for demo/agent-lab, open it, then create an issue titled Repro issue with body Fixed experiment.",
+  "kind": "issue",
+  "expected": {
+    "title": "Repro issue",
+    "body": "Fixed experiment"
+  },
+  "model": "gpt-5.2",
+  "verifier_repeats": 5,
+  "reset_repeats": 3
+}

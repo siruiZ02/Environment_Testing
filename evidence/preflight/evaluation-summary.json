@@ -1,0 +1,14 @@
+{
+  "github": {
+    "status": "blocked",
+    "error": "generation did not pass",
+    "interaction": "not_tested",
+    "verifier": "not_tested"
+  },
+  "amazon": {
+    "status": "blocked",
+    "error": "generation did not pass",
+    "interaction": "not_tested",
+    "verifier": "not_tested"
+  }
+}

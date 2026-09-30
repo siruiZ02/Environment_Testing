@@ -1,0 +1,15 @@
+{
+  "upstream_commit": "f3a43895e0e496ac0c7435f69a92c7c94c05fa0d",
+  "inspected_at": "2026-09-30",
+  "generation_entrypoint": "cursor-agent -p --force --output-format stream-json --stream-partial-output --model gpt-5.2",
+  "local_blockers": [
+    "cursor-agent unavailable",
+    "git clone failed: browser-proxy:8889 unavailable"
+  ],
+  "repository_initial_state": {
+    "branches": [],
+    "size": 0,
+    "default_branch": "main"
+  },
+  "scope": "Functional minimum, not screenshot-faithful reproduction; fixed spec replaces absent reference screenshots."
+}

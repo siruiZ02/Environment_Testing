@@ -1,0 +1,17 @@
+{
+  "site": "github",
+  "port": 13000,
+  "seed": {
+    "repo": "demo/agent-lab",
+    "issues": []
+  },
+  "task": "Search for demo/agent-lab, open it, then create an issue titled Repro issue with body Fixed experiment.",
+  "kind": "issue",
+  "expected": {
+    "title": "Repro issue",
+    "body": "Fixed experiment"
+  },
+  "model": "gpt-5.2",
+  "verifier_repeats": 5,
+  "reset_repeats": 3
+}

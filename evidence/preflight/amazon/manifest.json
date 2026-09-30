@@ -1,0 +1,9 @@
+{
+  "upstream_commit": "f3a43895e0e496ac0c7435f69a92c7c94c05fa0d",
+  "input_sha256": "ce84e837dd3f21dcfffde00de039e3e03650e43c54b6a16aa3b29e3f5bffed18",
+  "prompt_sha256": "95a5d7060d03dc03771106fd64f0ec8116f85d758f9ec77dffe206b912258bd2",
+  "model": "gpt-5.2",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "note": "Fixed inputs do not guarantee deterministic LLM generation."
+}

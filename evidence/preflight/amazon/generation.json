@@ -1,0 +1,15 @@
+{
+  "status": "blocked",
+  "error": "[Errno 2] No such file or directory: 'cursor-agent'",
+  "argv": [
+    "cursor-agent",
+    "-p",
+    "--force",
+    "--output-format",
+    "stream-json",
+    "--stream-partial-output",
+    "--model",
+    "gpt-5.2",
+    "<prompt.txt>"
+  ]
+}

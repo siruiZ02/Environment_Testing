@@ -1,0 +1,23 @@
+{
+  "site": "amazon",
+  "port": 13010,
+  "seed": {
+    "products": [
+      {
+        "id": "P001",
+        "name": "Repro Notebook",
+        "price_cents": 1299
+      }
+    ],
+    "cart": []
+  },
+  "task": "Search for Repro Notebook, open its details, and add exactly one to the cart. Do not checkout.",
+  "kind": "cart",
+  "expected": {
+    "product_id": "P001",
+    "quantity": 1
+  },
+  "model": "gpt-5.2",
+  "verifier_repeats": 5,
+  "reset_repeats": 3
+}
